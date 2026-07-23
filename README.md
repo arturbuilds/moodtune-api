@@ -47,8 +47,9 @@ uvicorn main:app --reload
 ### Authentication
 
 ```
-POST /register
+POST /tracks
 POST /login
+GET /recommend
 ```
 
 ### User
