@@ -66,8 +66,6 @@ GET /playlists
 POST /favorites
 ```
 
-*(Измени список эндпоинтов под свои реальные маршруты.)*
-
 ## Project Structure
 
 ```
