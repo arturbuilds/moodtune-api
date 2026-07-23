@@ -1,13 +1,91 @@
-# MoodTune API 🎧
+# MoodTune API
 
-**MoodTune API** is a Python-based backend application (REST API) designed to personalize music experiences.
+Backend API for the MoodTune music application.
 
-### Project Overview
-The main goal of this service is to select and recommend music based on the user's current mood. The system analyzes user inputs and utilizes an integrated Machine Learning model (`ml_model.py`) to suggest the most suitable music tracks.
+## Features
 
-### Key Features
-* **Authentication (`auth.py`)** - Secure user registration, login, and route protection.
-* **Smart Recommendation (`ml_model.py`)** - Machine learning logic for analyzing mood and predicting tracks.
-* **Database Management (`database.py`)** - Reliable data storage for user profiles, tracks, and history.
-* **Database Migrations (`migrations/`)** - Automated database schema tracking via Alembic.
-* **Automated Testing (`tests/`)** - Built-in test suite to ensure API reliability and stability.
+- User authentication
+- JWT authorization
+- User management
+- REST API
+- FastAPI backend
+- Asynchronous architecture
+
+## Tech Stack
+
+- Python
+- FastAPI
+- SQLAlchemy
+- SQLite
+- JWT
+- Pydantic
+- Uvicorn
+
+## Installation
+
+```bash
+git clone https://github.com/arturbuilds/moodtune-api.git
+cd moodtune-api
+
+pip install -r requirements.txt
+```
+
+## Run
+
+```bash
+python main.py
+```
+
+or
+
+```bash
+uvicorn main:app --reload
+```
+
+## API Endpoints
+
+### Authentication
+
+```
+POST /register
+POST /login
+```
+
+### User
+
+```
+GET /me
+PUT /me
+```
+
+### Music
+
+```
+GET /tracks
+GET /playlists
+POST /favorites
+```
+
+*(Измени список эндпоинтов под свои реальные маршруты.)*
+
+## Project Structure
+
+```
+moodtune-api/
+│
+├── routers/
+├── models/
+├── schemas/
+├── database.py
+├── main.py
+├── requirements.txt
+└── README.md
+```
+
+## Future Improvements
+
+- PostgreSQL
+- Docker
+- Redis
+- Unit Tests
+- CI/CD
